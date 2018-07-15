@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="homeContainer">
+    <div class="bodyRow">
+
+    </div>
+    <div class="bodyRow">
+        <div class="bodyColumn">
+            <a class="imageDiv" href='@Url.Action("ParkingSensors", "ParkingSensors")'>
+                <img src='@Url.Content("~/Content/Images/parking.bmp")' class="imageDiv" />
+            </a>
+
+        </div>
+        <div class="bodyColumn">
+            <a class="imageDiv" href='@Url.Action("index", "Home")'>
+                <img src='@Url.Content("~/Content/Images/train.bmp")' class="imageDiv" />
+            </a>
+        </div>
+    </div>
+    <div class="bodyRow">
+        <div class="bodyColumn">
+            <a class="imageDiv" href='@Url.Action("ParkingSensors", "ParkingSensors")'>
+                <img src='@Url.Content("~/Content/Images/bikeshare.bmp")' class="imageDiv" />
+            </a>
+        </div>
+        <div class="bodyColumn">
+            <a class="imageDiv" href='@Url.Action("index", "Home")'>
+                <img src='@Url.Content("~/Content/Images/pedestrians.bmp")' class="imageDiv" />
+            </a>
+        </div>
+    </div>
+    <div class="bodyRow">
+        <div class="bodyColumn">
+            <a class="imageDiv" href='@Url.Action("AutomationTesting", "AutomationTesting")'>
+                <img src='@Url.Content("~/Content/Images/automationTesting.bmp")' class="imageDiv" />
+            </a>
+        </div>
+
+    </div>
+</div>

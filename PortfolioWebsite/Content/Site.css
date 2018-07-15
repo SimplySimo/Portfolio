@@ -1,0 +1,121 @@
+﻿body {
+    padding-top: 120px;
+    background: lightgray;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+select,
+textarea {
+    max-width: 280px;
+}
+
+.main-nav {
+    height: 6em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 5px 16px;
+    background-color: black;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.small {
+    height: 40px;
+}
+
+.main-nav-buttonContainer {
+    height: 100%;
+    padding-left: 20%;
+    
+}
+
+.ButtonNavGroup {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    height: 100%;
+    width: 10em;
+}
+
+    .ButtonNavGroup:hover {
+        border-bottom: 2px solid white;
+    }
+
+.homeContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.bodyRow {
+    display: block;
+    height: 20em;
+}
+
+.bodyColumn {
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    border: none;
+    animation: none;
+}
+
+.imageDiv {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 5px;
+    border-radius: 25px;
+}
+
+    .imageDiv:hover {
+        opacity: 0.7;
+    }
+
+
+/*PARKING DETAILS*/
+.parkingButtonContainer {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid black;
+    height: 3em;
+    width: 100%;
+    display: inline-block;
+}
+
+.parkingButtonOptions {
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+
+#SearchParking {
+    background-image: url('Images/searchIcon.png');
+    -ms-background-size: 28px 28px;
+    background-size: 28px 28px;
+    -ms-background-position: 10px,10px;
+    background-position: 10px,10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}

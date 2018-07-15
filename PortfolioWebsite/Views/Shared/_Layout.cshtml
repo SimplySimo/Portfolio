@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <div class="main-nav">
+        <div class="main-nav-buttonContainer">
+            <input type="button" class="ButtonNavGroup" value="Logo" onclick="location.href='@Url.Action("Index", "Home")'"/>
+            <input type="button" class="ButtonNavGroup" value="Home" onclick="location.href='@Url.Action("Index", "Home")'"/>
+            <input type="button" class="ButtonNavGroup" value="About" onclick="location.href='@Url.Action("About", "Home")'"/>
+        </div>
+    </div>
+
+    <div class="body-content">
+
+        @RenderBody()
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
+
+<script>
+    var nav = document.querySelector('.main-nav');
+    var position = 0;
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+            nav.classList += ' small';
+        } else {
+            nav.classList = 'main-nav';
+        }
+    });
+</script>

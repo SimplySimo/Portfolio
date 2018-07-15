@@ -1,0 +1,37 @@
+﻿@model System.Collections.Generic.List<DataAccess.ParkingSensors.Model.ParkingData>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<div>
+    <div class="parkingButtonContainer">
+        <div class="parkingButtonOptions">
+            <input type="button" id="btnClick" class="button" value="Refresh" />
+            <input type="button" id="btnHide" class="button" value="Hide Table" />
+        </div>
+    </div>
+    <div id="divTest">
+
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    $('#btnClick').click(function () {
+        $('#divTest2').remove();
+        $('#divTest').show();
+        $.get('@Url.Action("Refresh", "ParkingSensors")', {}, function (model) {
+            $("#divTest").html(model);
+        });
+    });
+    $('#btnHide').click(function () {
+        $('#divTest').hide();
+    });
+</script>

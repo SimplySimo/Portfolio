@@ -1,0 +1,70 @@
+﻿@using DataAccess.ParkingSensors.Model
+@model List<ParkingData>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "";
+}
+
+<h1>Search results</h1>
+<p>Number of free carspots = @ViewData["UnOccupiedBays"]</p>
+<input type="text" id="SearchParking" onkeyup="myFunction()" placeholder="Search for bayid.." title="Type in a bay id" />
+<table id="Parking" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().BayId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Lat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Lon)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (ParkingData item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BayId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lon)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "ParkingSpotDetail", new { bayId = item.BayId })
+            </td>
+        </tr>
+    }
+</table>
+
+<script>
+    function myFunction() {
+        var td, i;
+        var input = document.getElementById("SearchParking");
+        var filter = input.value.toUpperCase();
+        var table = document.getElementById("Parking");
+        var tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+</script>
