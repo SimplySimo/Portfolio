@@ -162,6 +162,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\automationTesting.bmp" />
+    <Content Include="Content\Images\problemSolving.bmp" />
     <Content Include="Content\Images\pedestrians.bmp" />
     <Content Include="Content\Images\searchIcon.png" />
     <Content Include="Content\Images\train.bmp" />

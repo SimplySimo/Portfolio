@@ -3,40 +3,46 @@
 }
 
 <div class="homeContainer">
-    <div class="bodyRow">
-
+    <div class="IntroContent">
+        <h2>Matthew's Portfolio Website</h2>
+        <h3>Currently under construction</h3>
     </div>
     <div class="bodyRow">
         <div class="bodyColumn">
-            <a class="imageDiv" href='@Url.Action("ParkingSensors", "ParkingSensors")'>
-                <img src='@Url.Content("~/Content/Images/parking.bmp")' class="imageDiv" />
+
+            <a class="imageDiv imageText" id="parkingSensors" href='@Url.Action("ParkingSensors", "ParkingSensors")'>
+                <p id="imageText">Parking Sensors</p>
             </a>
 
         </div>
         <div class="bodyColumn">
-            <a class="imageDiv" href='@Url.Action("index", "Home")'>
-                <img src='@Url.Content("~/Content/Images/train.bmp")' class="imageDiv" />
-            </a>
-        </div>
-    </div>
-    <div class="bodyRow">
-        <div class="bodyColumn">
-            <a class="imageDiv" href='@Url.Action("ParkingSensors", "ParkingSensors")'>
-                <img src='@Url.Content("~/Content/Images/bikeshare.bmp")' class="imageDiv" />
-            </a>
-        </div>
-        <div class="bodyColumn">
-            <a class="imageDiv" href='@Url.Action("index", "Home")'>
-                <img src='@Url.Content("~/Content/Images/pedestrians.bmp")' class="imageDiv" />
+            <a class="imageDiv" id="ptv" href='@Url.Action("index", "Home")'>
+                <p id="imageText">PTV Api - Under Construction</p>
             </a>
         </div>
     </div>
     <div class="bodyRow">
         <div class="bodyColumn">
-            <a class="imageDiv" href='@Url.Action("AutomationTesting", "AutomationTesting")'>
-                <img src='@Url.Content("~/Content/Images/automationTesting.bmp")' class="imageDiv" />
+            <a class="imageDiv" id="bikeShare" href='@Url.Action("ParkingSensors", "ParkingSensors")'>
+                <p id="imageText">Melbourne Bike Share - Under Construction</p>
             </a>
         </div>
-
+        <div class="bodyColumn">
+            <a class="imageDiv" id ="pedestrians" href='@Url.Action("index", "Home")'>
+                <p id="imageText">Melbourne Pedestian Tracking - Under Construction</p>
+            </a>
+        </div>
+    </div>
+    <div class="bodyRow">
+        <div class="bodyColumn">
+            <a class="imageDiv" id="automationTesting"href='@Url.Action("AutomationTesting", "AutomationTesting")'>
+                <p id="imageText">Automation Testing</p>
+            </a>
+        </div>
+        <div class="bodyColumn">
+            <a class="imageDiv" id="problemSolving" href='@Url.Action("AutomationTesting", "AutomationTesting")'>
+                <p id="imageText">Code Challenges</p>
+            </a>
+        </div>
     </div>
 </div>

@@ -1,13 +1,18 @@
 ﻿@model System.Collections.Generic.List<DataAccess.ParkingSensors.Model.ParkingData>
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Parking Sensors";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+<p>
+    Contains information from in-ground car parking bay sensors across the city with status indicating if a car is present or not present, the spatial coordinate of the sensor, and the street marker id.
+</p>
+
+<p>please note - 	Parking Sensors are not operational on Public Holidays. Parking Sensors will show car parks as vacant when blocked by construction zones. </p>
 <div>
     <div class="parkingButtonContainer">
         <div class="parkingButtonOptions">
