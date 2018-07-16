@@ -151,6 +151,7 @@
     <Compile Include="Controllers\AutomationTestingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParkingSensorsController.cs" />
+    <Compile Include="Controllers\ProblemSolvingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,8 +163,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\automationTesting.bmp" />
+    <Content Include="Content\Images\Automation\SpecFlow.bmp" />
+    <Content Include="Content\Images\Automation\Selenium.bmp" />
     <Content Include="Content\Images\problemSolving.bmp" />
     <Content Include="Content\Images\pedestrians.bmp" />
+    <Content Include="Content\Images\ProblemSolving\CoderByte.bmp" />
+    <Content Include="Content\Images\ProblemSolving\HackerRank.bmp" />
     <Content Include="Content\Images\searchIcon.png" />
     <Content Include="Content\Images\train.bmp" />
     <Content Include="Content\Images\parking.bmp" />
@@ -209,6 +214,7 @@
     <Content Include="Views\ParkingSensors\ParkingListPartial.cshtml" />
     <Content Include="Views\ParkingSensors\ParkingSpotDetail.cshtml" />
     <Content Include="Views\AutomationTesting\AutomationTesting.cshtml" />
+    <Content Include="Views\ProblemSolving\ProblemSolving.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
