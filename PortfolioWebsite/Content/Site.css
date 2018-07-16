@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 120px;
     background: lightgray;
+    padding-bottom: 120px;
 }
 
 
@@ -39,6 +40,16 @@ textarea {
 
 .small {
     height: 40px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
 .main-nav-buttonContainer {
@@ -80,6 +91,7 @@ textarea {
 .bodyRow {
     display: block;
     height: 20em;
+    vertical-align: top;
 }
 
 .bodyColumn {
@@ -87,6 +99,8 @@ textarea {
     width: 49%;
     height: 100%;
     border: none;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     animation: none;
 }
 
@@ -95,8 +109,8 @@ textarea {
     width: 100%;
     height: 95%;
     overflow: hidden;
-    padding-bottom: 5px;
-    border-radius: 25px;
+    padding-bottom: 3px;
+    border-radius: 30px;
     opacity: 0.9;
     display: inline-block;
     vertical-align: top;
@@ -185,3 +199,28 @@ textarea {
 
 
 /*Automation*/
+.autoContainer {
+    display: table;
+    width: 100%;
+}
+
+.autoCol {
+    display: table-cell;
+    height: 100%;
+    width: 20%;
+}
+
+.autoImage {
+    -webkit-object-fit: cover;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;
+    height: 20em;
+    padding-bottom: 3em;
+}
+
+.autoText {
+    padding: 1em;
+}

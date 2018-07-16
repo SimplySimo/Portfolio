@@ -12,9 +12,9 @@
 <body>
     <div class="main-nav">
         <div class="main-nav-buttonContainer">
-            <input type="button" class="ButtonNavGroupLogo" value="Logo" onclick="location.href='@Url.Action("Index", "Home")'"/>
-            <input type="button" class="ButtonNavGroup" value="Home" onclick="location.href='@Url.Action("Index", "Home")'"/>
-            <input type="button" class="ButtonNavGroup" value="About" onclick="location.href='@Url.Action("About", "Home")'"/>
+            <input type="button" class="ButtonNavGroupLogo" value="Logo" onclick="location.href='@Url.Action("Index", "Home")'" />
+            <input type="button" class="ButtonNavGroup" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
+            <input type="button" class="ButtonNavGroup" value="About" onclick="location.href='@Url.Action("About", "Home")'" />
         </div>
     </div>
 
@@ -24,6 +24,9 @@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
+    </div>
+    <div class="footer">
+        <p>Ⓒ 2018 - Matthew Leviny</p>
     </div>
 </body>
 </html>
