@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -11,10 +12,12 @@
 
 <body>
     <div class="main-nav">
-        <div class="main-nav-buttonContainer">
-            <input type="button" class="ButtonNavGroupLogo" value="Logo" onclick="location.href='@Url.Action("Index", "Home")'" />
-            <input type="button" class="ButtonNavGroup" value="Home" onclick="location.href='@Url.Action("Index", "Home")'" />
-            <input type="button" class="ButtonNavGroup" value="About" onclick="location.href='@Url.Action("About", "Home")'" />
+        <div class="main-nav-buttonContainer" id="myTopnav">
+            <a class="active" onclick="location.href = '@Url.Action("Index", "Home")'">Logo</a>
+            <a onclick="location.href = '@Url.Action("Index", "Home")'">Home</a>
+            <a onclick="location.href = '@Url.Action("About", "Home")'">About</a>
+            <a onclick="location.href = '@Url.Action("About", "Home")'">About Me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
     </div>
 
@@ -42,4 +45,13 @@
             nav.classList = 'main-nav';
         }
     });
+
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "main-nav-buttonContainer") {
+            x.className += " responsive";
+        } else {
+            x.className = "main-nav-buttonContainer";
+        }
+    }
 </script>
