@@ -41,7 +41,6 @@ textarea {
     overflow: auto;
 }
 
-
 .small {
     height: 50px;
 }
@@ -59,7 +58,7 @@ textarea {
 }
 
 .main-nav-buttonContainer {
-    padding-left: 10em;
+    margin-left: 20%;
 }
 
     .main-nav-buttonContainer a {
@@ -77,11 +76,11 @@ textarea {
             color: white;
         }
 
-.icon {
-    display: none;
-    height: 100%;
-    width: auto;
-}
+    .main-nav-buttonContainer > .icon {
+        display: none;
+        height: 100%;
+        width: auto;
+    }
 
 @media screen and (max-width: 600px) {
     .main-nav-buttonContainer a:not(:first-child) {
@@ -290,18 +289,18 @@ textarea {
     }
 }
 
-    .autoImage {
-        -webkit-object-fit: cover;
-        object-fit: cover;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: auto;
-        height: 20em;
-        padding-bottom: 3em;
-        border-radius: 30px;
-    }
+.autoImage {
+    -webkit-object-fit: cover;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;
+    height: 20em;
+    padding-bottom: 3em;
+    border-radius: 30px;
+}
 
-    .autoText {
-        padding: 1em;
-    }
+.autoText {
+    padding: 1em;
+}
