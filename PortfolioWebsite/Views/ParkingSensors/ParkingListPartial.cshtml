@@ -7,8 +7,8 @@
 }
 
 <h1>Search results</h1>
-<p>Number of free carspots = @ViewData["UnOccupiedBays"]</p>
-<input type="text" id="SearchParking" onkeyup="myFunction()" placeholder="Search for bayid.." title="Type in a bay id" />
+<p>Number of free car spots = @ViewData["UnOccupiedBays"]</p>
+<input type="text" id="SearchParking" onkeyup="search()" placeholder="Search for bayid.." title="Type in a bay id" />
 <table id="Parking" class="table">
     <tr>
         <th>
@@ -49,7 +49,7 @@
 </table>
 
 <script>
-    function myFunction() {
+    function search() {
         var td, i;
         var input = document.getElementById("SearchParking");
         var filter = input.value.toUpperCase();
@@ -67,4 +67,5 @@
         }
 
     }
+
 </script>

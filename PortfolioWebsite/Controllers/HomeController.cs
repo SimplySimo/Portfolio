@@ -15,5 +15,12 @@ namespace MelbourneData.Controllers
 
             return View();
         }
+
+        public ActionResult AboutMe()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
     }
 }

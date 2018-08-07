@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AutomationTestingController.cs" />
+    <Compile Include="Controllers\BikeShareController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParkingSensorsController.cs" />
     <Compile Include="Controllers\ProblemSolvingController.cs" />
@@ -218,6 +219,8 @@
     <Content Include="Views\ParkingSensors\ParkingSpotDetail.cshtml" />
     <Content Include="Views\AutomationTesting\AutomationTesting.cshtml" />
     <Content Include="Views\ProblemSolving\ProblemSolving.cshtml" />
+    <Content Include="Views\Home\AboutMe.cshtml" />
+    <Content Include="Views\BikeShare\BikeShare.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

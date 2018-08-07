@@ -1,0 +1,48 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Melbourne Bike Share";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Melbourne Bike Share</h2>
+<body>
+    <br />
+    <div id="map"></div>
+    <div id="divTest"></div>
+
+    <script>
+        function initMap() {
+            var myLatlng = { lat: -25.363, lng: 131.044 };
+
+            var map = new google.maps.Map(document.getElementById('map'),
+                {
+                    zoom: 4,
+                    center: myLatlng
+                });
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Click to zoom'
+            });
+
+            marker.addListener('click',
+                function () {
+                    map.setZoom(8);
+                    map.setCenter(marker.getPosition());
+                    $.get('@Url.Action("GetParkingInfo", "BikeShare", new { bayId = 1 })', {}, function (model) {
+            $("#divTest").html(model);
+        });
+                });
+        }
+
+    </script>
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDklNWhszRKRIj_KOFO_5-xGQs-CeoRdoI&callback=initMap">
+    </script>
+
+</body>
