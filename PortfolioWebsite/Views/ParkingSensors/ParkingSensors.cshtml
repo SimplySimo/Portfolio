@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<DataAccess.ParkingSensors.Model.ParkingData>
+﻿@model System.Collections.Generic.List<DataAccess.MelbourneDataPortal.ParkingSensors.Model.ParkingData>
 
 @{
     ViewBag.Title = "Parking Sensors";
@@ -20,23 +20,21 @@
         <input type="button" id="btnHide" class="parkingButton" value="Hide Table" />
 
     </div>
-    <div id="divTest">
+    <div id="ParkingData"></div>
 
-    </div>
 </div>
 
 @Scripts.Render("~/bundles/jquery")
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
-    $('#btnClick').click(function () {
-        $('#divTest2').remove();
-        $('#divTest').show();
+   $('#btnClick').click(function () {
+       $('#ParkingData').show();
         $.get('@Url.Action("Refresh", "ParkingSensors")', {}, function (model) {
-            $("#divTest").html(model);
+            $("#ParkingData").html(model);
         });
     });
     $('#btnHide').click(function () {
-        $('#divTest').hide();
+        $('#ParkingData').hide();
     });
 </script>

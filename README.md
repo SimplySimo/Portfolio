@@ -17,14 +17,22 @@ Apart from the custom built website, The project displays a range of work either
 			 - can get more information about the row of data by clicking on Details
 		 - Google Geo-coding
 			 - used to change Lat & Lon into a street address
-		 - Google maps API
+		 - Google static maps API
 			 - Creation of a static map with the point pinned to it
 		 - Future wishes / In the pipeline
 			 - List of nearest PTV stops
  - PTV API
 	 -  Under Development
  - Melbourne Bike Share
-	 - Under Development
+  	 -  Under Development (need to implement)
+	  	 - requires the creation of a webservice to place data on map
+	  	 - currently incorrect locations shown and static listener
+	 - Uses
+		 - Data-set from Melbourne City Council
+			 - shows location and information about docking station (nb bike, nb empty spaces etc.)
+		 - Google maps api
+			 - movable map with markers of locations (Currently static test data)
+			 - markers clickable to show more information
  - Melbourne Pedestrian Data
 	 - Under Development
  - Automation Test Suites

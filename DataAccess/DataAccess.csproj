@@ -48,12 +48,17 @@
   <ItemGroup>
     <Compile Include="GeoCoding\geocoding.cs" />
     <Compile Include="GeoCoding\Model\GeoCodingModel.cs" />
-    <Compile Include="ParkingSensors\Model\ParkingData.cs" />
-    <Compile Include="ParkingSensors\ParkingDataAccess.cs" />
+    <Compile Include="MelbourneDataPortal\MelbourneBikeShare\BikeShareDataAccess.cs" />
+    <Compile Include="MelbourneDataPortal\MelbourneBikeShare\Model\BikeShareData.cs" />
+    <Compile Include="MelbourneDataPortal\ParkingSensors\Model\ParkingData.cs" />
+    <Compile Include="MelbourneDataPortal\ParkingSensors\ParkingDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

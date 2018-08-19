@@ -3,8 +3,8 @@ using System.Configuration;
 using System.Linq;
 using System.Web.Mvc;
 using DataAccess.GeoCoding;
-using DataAccess.ParkingSensors;
-using DataAccess.ParkingSensors.Model;
+using DataAccess.MelbourneDataPortal.ParkingSensors;
+using DataAccess.MelbourneDataPortal.ParkingSensors.Model;
 
 namespace MelbourneData.Controllers
 {

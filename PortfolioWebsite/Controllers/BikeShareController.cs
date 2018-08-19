@@ -1,18 +1,29 @@
 ﻿using System.Web.Mvc;
+using DataAccess.MelbourneDataPortal.MelbourneBikeShare.Model;
+using DataAccess.MelbourneDataPortal.MelbourneBikeShare;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MelbourneData.Controllers
 {
     public class BikeShareController : Controller
     {
-        // GET: BikeShare
+        private static List<BikeShareData> _model = new List<BikeShareData>();
+
         public ActionResult BikeShare()
         {
-            return View();
+            _model = BikeShareDataAccess.GetDataSet(ConfigurationManager.AppSettings["BikeShareDataset"],
+                ConfigurationManager.AppSettings["CityOfMelbourneKey"]).Values.ToList();
+
+            return View(_model);
         }
 
-        public ActionResult GetParkingInfo(int BayId)
+        public ActionResult GetParkingInfo()
         {
-            return null;
+            int BayId = 10;
+            BikeShareData _data = _model.Find(item => item.BayId == BayId);
+            return View("BikeShareDetailsPartial", _data);
         }
     }
 }
