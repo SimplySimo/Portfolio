@@ -23,7 +23,7 @@ namespace MelbourneData.Controllers
         {
             int BayId = 10;
             BikeShareData _data = _model.Find(item => item.BayId == BayId);
-            return View("BikeShareDetailsPartial", _data);
+            return PartialView("BikeShareDetailsPartial", _data);
         }
     }
 }

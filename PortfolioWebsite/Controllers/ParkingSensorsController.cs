@@ -31,7 +31,7 @@ namespace MelbourneData.Controllers
             ViewData.Add("occupiedBays", occupiedBays);
             ViewData.Add("UnOccupiedBays", unOccupiedBays);
 
-            return View("ParkingListPartial", _model);
+            return PartialView("ParkingListPartial", _model);
         }
 
         public ActionResult ParkingSpotDetail(int bayid)
