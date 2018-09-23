@@ -4,11 +4,13 @@ namespace MelbourneData.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -16,6 +18,7 @@ namespace MelbourneData.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult AboutMe()
         {
             ViewBag.Message = "Your application description page.";

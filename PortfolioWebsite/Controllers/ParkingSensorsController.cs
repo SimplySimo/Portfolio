@@ -14,11 +14,13 @@ namespace MelbourneData.Controllers
         private List<ParkingData> _model = new List<ParkingData>();
         private static ParkingData _currentData = new ParkingData();
 
+        [HttpGet]
         public ActionResult ParkingSensors()
         {
             return View(_model);
         }
 
+        [HttpGet]
         public ActionResult Refresh()
         {
             _data = ParkingDataAccess.GetDataSet(ConfigurationManager.AppSettings["ParkingSensorsDataset"],
@@ -34,10 +36,11 @@ namespace MelbourneData.Controllers
             return PartialView("ParkingListPartial", _model);
         }
 
+        [HttpGet]
         public ActionResult ParkingSpotDetail(int bayid)
         {
             _currentData = _data.FirstOrDefault(x => x.BayId == bayid);
-            ViewData.Add("mapimage", Mapurlgenerator(_currentData.Lat, _currentData.Lon, ConfigurationManager.AppSettings["GoogleGeoCodingKey"]));
+            ViewData.Add("mapimage", MapUrlGenerator(_currentData.Lat, _currentData.Lon, ConfigurationManager.AppSettings["GoogleGeoCodingKey"]));
 
             var geocodingresult = Geocoding.GETAsync(_currentData.Lat, _currentData.Lon).Result.results.First();
 
@@ -46,7 +49,7 @@ namespace MelbourneData.Controllers
             return View(_currentData);
         }
 
-        private string Mapurlgenerator(double lat, double lon, string key)
+        private string MapUrlGenerator(double lat, double lon, string key)
         {
             return "https://maps.googleapis.com/maps/api/staticmap?center=melbourne,victoria&zoom=14&size=600x600&maptype=roadmap&markers=color:blue%7clabel:s%7c" + lat + "," + lon + "&key=" + key;
         }

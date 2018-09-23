@@ -4,7 +4,7 @@ namespace MelbourneData.Controllers
 {
     public class AutomationTestingController : Controller
     {
-        // GET: AutomationTesting
+        [HttpGet]
         public ActionResult AutomationTesting()
         {
             return View();

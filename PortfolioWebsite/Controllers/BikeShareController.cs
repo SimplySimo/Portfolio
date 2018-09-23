@@ -11,6 +11,7 @@ namespace MelbourneData.Controllers
     {
         private static List<BikeShareData> _model = new List<BikeShareData>();
 
+        [HttpGet]
         public ActionResult BikeShare()
         {
             _model = BikeShareDataAccess.GetDataSet(ConfigurationManager.AppSettings["BikeShareDataset"],
@@ -19,6 +20,7 @@ namespace MelbourneData.Controllers
             return View(_model);
         }
 
+        [HttpGet]
         public ActionResult GetParkingInfo()
         {
             int BayId = 10;
