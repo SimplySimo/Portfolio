@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container main-nav-buttonContainer">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Moula Code Challenge", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Create Customer", "CreateCustomer", "Customer")</li>
+                    <li>@Html.ActionLink("All Customers", "ListCustomer", "Customer")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-content no-Margin">
+        <br />
+        @if (TempData["message"] != null)
+        {
+            if (TempData["message"].Equals("Registered Successfully"))
+            {
+                <div class="alert alert-success fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong>
+                </div>
+            }
+
+            if (TempData["message"].Equals("Customer Already Exists"))
+            {
+                <div class="alert alert-danger fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>User already exists!</strong>
+                </div>
+            }
+            if (TempData["message"].Equals("Failed to create customer"))
+            {
+                <div class="alert alert-danger fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Failed to create customer </strong>
+                </div>
+            }
+
+            if (TempData["message"].Equals("Unable to connect to database"))
+            {
+                <div class="alert alert-danger fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Unable to connect to database!</strong>
+                </div>
+            }
+
+
+        }
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -3,7 +3,10 @@
     background: lightgray;
 }
 
-
+.no-Margin {
+    margin-left: 0;
+    margin-right: 0
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 20%;

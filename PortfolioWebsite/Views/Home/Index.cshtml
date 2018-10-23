@@ -1,5 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <div class="homeContainer">
@@ -15,20 +17,8 @@
             </a>
         </div>
         <div class="bodyColumn">
-            <a class="imageDiv" id="ptv" href='@Url.Action("index", "Home")'>
-                <p id="imageText">PTV Api - Under Construction</p>
-            </a>
-        </div>
-    </div>
-    <div class="bodyRow">
-        <div class="bodyColumn">
             <a class="imageDiv" id="bikeShare" href='@Url.Action("BikeShare", "BikeShare")'>
                 <p id="imageText">Melbourne Bike Share - Under Construction</p>
-            </a>
-        </div>
-        <div class="bodyColumn">
-            <a class="imageDiv" id="pedestrians" href='@Url.Action("index", "Home")'>
-                <p id="imageText">Melbourne Pedestrian Tracking - Under Construction</p>
             </a>
         </div>
     </div>

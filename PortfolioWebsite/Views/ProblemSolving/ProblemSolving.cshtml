@@ -7,3 +7,111 @@
 
 <h2>Problem Solving</h2>
 <h3>https://github.com/SimplySimo/CodingChallenges</h3>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<br />
+<h3>Moula Code Challenge</h3>
+<a onclick="location.href = '@Url.Action("Index", "Home" , new { Area="MoulaCodeChalleng" })'">Click hear to see a live example (Click the Code challenge button in the header to return)</a>
+<h6>please note: may take a while to load to my cheap plan on azure</h6>
+<h6>also some of the code in this may differ to the most recent commits on the repository </h6>
+<h6>https://github.com/SimplySimo/MoulaCodeChallenge</h6>
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    ReadMe file
+                </a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">
+                <h1><a id="Welcome_to_Matthews_Moula_Code_Challenge_0"></a>Welcome to Matthew’s Moula Code Challenge</h1>
+                <p>This Repository contains the code built from two basic user journeys provided (below)</p>
+                <h2><a id="How_to_run_2"></a>How to run</h2>
+                <p>unfortunately at this point in time there isn’t a copy hosted anywhere so you’ll have to run it in Visual Studio</p>
+                <ol>
+                    <li>Clone a copy from git hub</li>
+                    <li>Open in Visual Studio (with webdevelopment installed)</li>
+                    <li>ensure that you install the visual studio extension “Specflow” (This if for the bdd component in the selenium test suite)</li>
+                    <li>Compile (Nuget packages may need to be restored by rightclicking on the solution and selecting restore nuget packages)</li>
+                    <li>Run</li>
+                </ol>
+                <p>As a user I want to add a customer.</p>
+                <ul>
+                    <li>Required fields: First name, Last name, Email ✓</li>
+                    <li>Email must be valid ✓</li>
+                    <li>Validation errors are shown ✓</li>
+                    <li>Successful saving is reported to the user ✓</li>
+                    <li>Failure to save is reported to the user ✓</li>
+                    <li>On successful save the new customer should be visible in the list ✓</li>
+                </ul>
+                <p>As a user I want to see the top 5 oldest customers.</p>
+                <ul>
+                    <li>The list contains the columns Full Name, Email, DOB, CustCode</li>
+                    <li>The list is ordered by last name ✓</li>
+                    <li>The CustCode field is their full name with no spaces and lowercased followed by their DOB in the     format “yyyyMMdd” ✓</li>
+                </ul>
+                <h3><a id="How_to_run_Selenium_Automation_Suite_23"></a>How to run Selenium Automation Suite</h3>
+                <p>(normally you wouldn’t have to run two versions of VS as the site would be hosted and you could point the location to that address)</p>
+                <ol>
+                    <li>WHILE a copy of the project is running (VERY IMPORTANT)</li>
+                    <li>Open a new session of the project in visual studio</li>
+                    <li>from this session, go to test explorer and run the tests!</li>
+                    <li>Sit back, enjoy your coffee and watch the internet flash before your eyes</li>
+                </ol>
+                <p>please not that the selenium tests with make modifications whether add or remove to the database an would not be run on the live system</p>
+                <h3><a id="Comments_32"></a>Comments</h3>
+                <h5><a id="Assumptions_33"></a>Assumptions</h5>
+                <ul>
+                    <li>Selecting the 5 oldest customers was a bit ambiguous, where oldest by age or by how long they have been a customer for. In this situation I would consult with a BA to confirm the correct action. For this application I assumed that we were going by age</li>
+                    <li>only basic validation was needed, further discussions would be held around this with a BA</li>
+                    <li>That customer code would be used to check if the customer exists, discussion would be needed to work out how to stop duplicates</li>
+                </ul>
+                <h5><a id="What_has_been_done_37"></a>What has been done</h5>
+                <ul>
+                    <li>The ticked lines for the user stories</li>
+                    <li>Use of The Repository Pattern for handling database connections</li>
+                    <li>Changed the names of the environment specific configuration profiles. In the real world these would contain environment specific variables such as connection strings etc.</li>
+                    <li>Database is hosted on azure. To change databases all that needs to be done is modify the connection string. This can be done for environment specific connection strings</li>
+                    <li>Unit testing MVC application using mocked data context</li>
+                    <li>End2End/Functional testing with selenium suite</li>
+                </ul>
+                <h5><a id="What_was_missed_46"></a>What was missed</h5>
+                <ul>
+                    <li>code coverage check. Due to not having very much internet while creating this application and not having the enterprise version of Visual studio ive been unable to run any code coverage checks on the code and hence filled in the gaps</li>
+                    <li>patting all the dogs while working on this</li>
+                </ul>
+                <h5><a id="What_I_would_like_to_do_differently_next_time_Reflection__Extension_work_50"></a>What I would like to do differently next time (Reflection) / Extension work</h5>
+                <ul>
+                    <li>error handling for pages ie page not found</li>
+                    <li>Hash the password for the Azure Database (Security)</li>
+                    <li>Allow for a local db to take over if the Azure one is unavailable</li>
+                    <li></li>
+                </ul>
+                <p>If you need anymore information (ive probably missed something) dont hessitate to contact me</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    Requirements
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+            </div>
+        </div>
+    </div>
+</div>
