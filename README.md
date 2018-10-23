@@ -8,6 +8,8 @@ unfortunately at this point in time there isn't a copy hosted anywhere so you'll
  4. Run
 
 ## Components
+(Next item on my radar it to buid out the test suite for the website)
+
 Apart from the custom built website, The project displays a range of work either completed or in progress
  - Parking Sensors
 	 - Uses
